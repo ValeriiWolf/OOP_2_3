@@ -9,6 +9,17 @@ public abstract class Transport {
         this.wheelsCount = wheelsCount;
     }
 
+    public void updateTyre() {
+        System.out.println("Меняем покрышку");
+    }
+
+    public void service() {
+        System.out.println("Обслуживаем " + this.getModelName());
+        for (int i = 0; i < this.getWheelsCount(); i++) {
+            this.updateTyre();
+        }
+    }
+
     public String getModelName() {
         return modelName;
     }
